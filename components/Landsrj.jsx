@@ -42,7 +42,7 @@ const Landsrj = () => {
             name="controller-fast-backward"
             size={30}
             color="#887700"
-            style={{ marginTop: 5 }}
+            style={{ marginTop: 15 }}
           />
         </View>
         <View style={{ flexBasis: "80%" }}>
@@ -57,7 +57,7 @@ const Landsrj = () => {
           />
         </View>
       </View>
-      <View>
+      <View style={styles.space}>
         <FlatList
           data={showdata}
           numColumns={2}

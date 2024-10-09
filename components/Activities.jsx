@@ -80,7 +80,7 @@ export const Activities = () => {
       </View>
       {/** Activities end*/}
       {/*Category */}
-      <View>
+      <View style={styles.space}>
         <FlatList
           data={showactvity}
           numColumns={3}
