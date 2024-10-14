@@ -1,17 +1,18 @@
 import React from "react";
 import {
   Image,
+  Pressable,
   StyleSheet,
   Text,
   Touchable,
   TouchableOpacity,
   View,
 } from "react-native";
-import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import styles from "../styles/styles";
+import { useNavigation } from "@react-navigation/native";
 
-export const Headings = ({ navigation }) => {
+export const Headings = () => {
+  const Navigation = useNavigation();
   return (
     <View>
       <View style={styles.logo}>
@@ -24,14 +25,14 @@ export const Headings = ({ navigation }) => {
       </View>
       {/** About Section start */}
       <View style={{ flex: 1, flexDirection: "row", paddingVertical: 10 }}>
-        <TouchableOpacity
-          onPress={() => navigation.navigate("ExploreRajasthan")}
-        >
+        <Pressable onPress={() => Navigation.navigate("explore_rajasthan")}>
           <View
             style={{
               flexBasis: "50%",
               // backgroundColor: "red",
-              borderColor: "red",
+              borderColor: "brown",
+              borderWidth: 2,
+              borderRadius: 10,
             }}
           >
             <Image
@@ -43,15 +44,16 @@ export const Headings = ({ navigation }) => {
                 height: 150,
                 borderRadius: 5,
                 resizeMode: "cover",
-                marginHorizontal: 5,
-                marginVertical: 5,
+                // marginHorizontal: 5,
+                // marginVertical: 5,
+                margin: 5,
               }}
             />
             <Text style={{ textAlign: "center", fontWeight: "bold" }}>
               Explore Rajasthan
             </Text>
           </View>
-        </TouchableOpacity>
+        </Pressable>
         <View
           style={{
             flexBasis: "50%",

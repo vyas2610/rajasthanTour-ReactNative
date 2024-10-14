@@ -20,6 +20,7 @@ function HomeComponet() {
     <ScrollView
       style={{
         paddingHorizontal: 22,
+        backgroundColor: "#efefef",
       }}
     >
       <Headings />

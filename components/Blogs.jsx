@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Button } from "react-native";
 import { FlatList, Image, StyleSheet, Text, View } from "react-native";
 import styles from "../styles/styles";
+import colors from "../assets/colors";
 
 export const Blogs = () => {
   const [blogdata, updateblog] = useState([
@@ -135,16 +136,16 @@ export const Blogs = () => {
                 >
                   {item.content}
                 </Text>
-                <Text
+                <View
                   style={{
-                    backgroundColor: "#efefef",
+                    backgroundColor: colors.brown,
                     textAlign: "center",
                     padding: 10,
                     marginVertical: 10,
                   }}
                 >
-                  Read More
-                </Text>
+                  <Text style={{ textAlign: "center" }}>Read More</Text>
+                </View>
               </View>
             );
           }}

@@ -8,12 +8,12 @@ export default function App() {
   const Stack = createNativeStackNavigator();
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator screenOptions={{ headerShown: false }}>
         <Stack.Screen name="Home" component={HomeComponet} />
         <Stack.Screen
-          name="ExploreRajasthan"
+          name="explore_rajasthan"
           component={ExploreRaj}
-          options={{ title: "Explore Rajasthan" }}
+          options={{ title: "Explore Rajasthan", headerShown: true }}
         />
       </Stack.Navigator>
     </NavigationContainer>

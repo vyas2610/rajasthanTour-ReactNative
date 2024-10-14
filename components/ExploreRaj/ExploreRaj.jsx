@@ -1,8 +1,12 @@
 import React from "react";
-import { View } from "react-native";
+import { Text, View } from "react-native";
 
 const ExploreRaj = () => {
-  return <View>ExploreRaj</View>;
+  return (
+    <View>
+      <Text>ExploreRaj</Text>
+    </View>
+  );
 };
 
 export default ExploreRaj;
