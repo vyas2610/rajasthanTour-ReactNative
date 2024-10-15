@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  Alert,
   Image,
   Pressable,
   StyleSheet,
@@ -24,7 +25,9 @@ export const Headings = () => {
         />
       </View>
       {/** About Section start */}
-      <View style={{ flex: 1, flexDirection: "row", paddingVertical: 10 }}>
+      <View
+        style={{ flex: 1, flexDirection: "row", paddingVertical: 10, gap: 8 }}
+      >
         <Pressable onPress={() => Navigation.navigate("explore_rajasthan")}>
           <View
             style={{
@@ -54,28 +57,33 @@ export const Headings = () => {
             </Text>
           </View>
         </Pressable>
-        <View
-          style={{
-            flexBasis: "50%",
-          }}
-        >
-          <Image
-            source={{
-              uri: "https://m.economictimes.com/thumb/msid-94806838,width-1000,height-656,resizemode-4,imgsize-41808/october-2022-festivals-when-is-dussehra-karva-chauth-diwali-chhath-bhai-dooj-govardhan-here-is-full-list.jpg",
-            }}
+        <Pressable onPress={() => Navigation.navigate("explore_festivals")}>
+          <View
             style={{
-              width: 160,
-              height: 150,
-              borderRadius: 5,
-              resizeMode: "cover",
-              marginHorizontal: 5,
-              marginVertical: 5,
+              flexBasis: "50%",
+              borderColor: "brown",
+              borderWidth: 2,
+              borderRadius: 10,
             }}
-          />
-          <Text style={{ textAlign: "center", fontWeight: "bold" }}>
-            Explore Festivals
-          </Text>
-        </View>
+          >
+            <Image
+              source={{
+                uri: "https://m.economictimes.com/thumb/msid-94806838,width-1000,height-656,resizemode-4,imgsize-41808/october-2022-festivals-when-is-dussehra-karva-chauth-diwali-chhath-bhai-dooj-govardhan-here-is-full-list.jpg",
+              }}
+              style={{
+                width: 160,
+                height: 150,
+                borderRadius: 5,
+                resizeMode: "cover",
+                marginHorizontal: 5,
+                marginVertical: 5,
+              }}
+            />
+            <Text style={{ textAlign: "center", fontWeight: "bold" }}>
+              Explore Festivals
+            </Text>
+          </View>
+        </Pressable>
       </View>
     </View>
   );
